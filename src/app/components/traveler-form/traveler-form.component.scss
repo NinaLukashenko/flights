@@ -1,0 +1,21 @@
+.traveler-card {
+  width: 700px;
+  padding: 25px 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-actions {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.birthday-fields {
+  display: flex;
+  justify-content: space-between;
+}

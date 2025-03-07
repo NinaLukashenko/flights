@@ -1,0 +1,55 @@
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+  <mat-card class="traveler-card" appearance="outlined">
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstName" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last name</mat-label>
+      <input matInput formControlName="lastName" />
+    </mat-form-field>
+
+    <div>
+      <label>Gender: </label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="birthday-fields">
+      <mat-form-field>
+        <mat-label>Month of birth</mat-label>
+        <mat-select formControlName="monthOfBirth">
+          <mat-option *ngFor="let option of months" [value]="option"> {{ option }} </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Day of birth</mat-label>
+        <mat-select formControlName="dayOfBirth">
+          <mat-option *ngFor="let option of days" [value]="option"> {{ option }} </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Year of birth</mat-label>
+        <mat-select formControlName="yearOfBirth">
+          <mat-option *ngFor="let option of years" [value]="option"> {{ option }} </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Citizenship</mat-label>
+      <mat-select formControlName="citizenship">
+        <mat-option *ngFor="let option of citizenships" [value]="option"> {{ option }} </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+
+  <div class="form-actions">
+    <button mat-stroked-button class="button--smooth-square" (click)="onBackClicked()">Back</button>
+    <button mat-flat-button type="submit" class="button--smooth-square">Confirm</button>
+  </div>
+</form>

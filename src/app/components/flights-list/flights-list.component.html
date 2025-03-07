@@ -1,0 +1,9 @@
+<div *ngIf="flights && flights.length > 0; else noItems">
+  <app-flight-card *ngFor="let flight of flights" [flight]="flight"></app-flight-card>
+  
+  <button mat-stroked-button class="button--wide" (click)="onShowMoreClicked()">Show more</button>
+</div>
+
+<ng-template #noItems>
+<p style="width: 600px">Unfortunately, the is no available items.</p>
+</ng-template>

@@ -1,0 +1,21 @@
+<div>
+  <img [src]="'https://d263qmvlt29h99.cloudfront.net/' + flight.airline + '.svg'" alt="Airline Logo" width="40" height="auto">
+</div>
+<div>
+  <p>{{ flight.departure_time }}</p>
+  <p class="light-text">
+    <span>{{ flight.departure_airport }}</span> &#9702;
+    <span>{{ flight.departure_date | date:'MMM d'}}</span>
+  </p>
+</div>
+<div>
+  <p>{{ flight.arrival_time }}</p>
+  <p class="light-text">
+    <span>{{ flight.arrival_airport }}</span> &#9702;
+    <span>{{ flight.arrival_date | date:'MMM d'}}</span>
+  </p>
+</div>
+<div>
+  <p>{{ flight.duration_minutes }}</p>
+  <p class="light-text">{{ flight.stops | showStops }}</p>
+</div>

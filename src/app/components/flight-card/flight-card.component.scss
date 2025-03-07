@@ -1,0 +1,15 @@
+mat-card.flight-card {
+  width: 600px;
+  margin-bottom: 30px;
+  flex-direction: row;
+}
+
+.flight-card__purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: 1px solid grey;
+  align-items: center;
+  width: 100%;
+}
+

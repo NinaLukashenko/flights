@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  @include mat.button-overrides((
+    filled-container-color: rgba(19, 16, 63, 0.945),
+    filled-label-text-color: white,
+    outlined-outline-color: rgb(191, 188, 188),
+  ));
+}
+
+button.button--smooth-square {
+  border-radius: 10px;
+}
+
+.text--titled {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.text--light{
+  color: rgb(191, 188, 188);
+}
+
+button.button--wide {
+  width: 600px;
+}

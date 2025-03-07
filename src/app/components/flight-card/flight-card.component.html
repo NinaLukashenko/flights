@@ -1,0 +1,13 @@
+<mat-card class="flight-card" appearance="outlined">
+  <div>
+    <app-flight-details [flight]="flight.flights[0]"></app-flight-details>
+    <app-flight-details [flight]="flight.flights[1]"></app-flight-details>
+  </div>
+  <div class="flight-card__purchase">
+    <div>
+      <p class="text--titled">${{ flight.price }}</p>
+      <p>Per adult</p>
+    </div>
+    <button mat-flat-button class="button--smooth-square" (click)="onBookClicked()">Book</button>
+  </div>
+</mat-card>

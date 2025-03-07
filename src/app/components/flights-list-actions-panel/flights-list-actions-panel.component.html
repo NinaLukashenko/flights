@@ -1,0 +1,21 @@
+<mat-card class="actions-card" appearance="outlined">
+  <mat-card-content>
+    <section [formGroup]="sort">
+      <h4>Sort by</h4>
+      <mat-form-field>
+        <mat-select formControlName="sort" (selectionChange)="onSortChanged()">
+          <mat-option value="price_asc"> Price (Lowest) </mat-option>
+          <mat-option value="price_desc"> Price (Highest) </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+  
+    <section [formGroup]="stops">
+      <h4>Stops</h4>
+      <p><mat-checkbox (change)="onStopsChanged()" formControlName="all">All stops</mat-checkbox></p>
+      <p><mat-checkbox (change)="onStopsChanged()" formControlName="0">Nonstops</mat-checkbox></p>
+      <p><mat-checkbox (change)="onStopsChanged()" formControlName="1">1 stop</mat-checkbox></p>
+      <p><mat-checkbox (change)="onStopsChanged()" formControlName="2">2 stops</mat-checkbox></p>
+    </section>
+  </mat-card-content>
+</mat-card>
