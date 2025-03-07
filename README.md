@@ -11,7 +11,7 @@ This is an Angular application for browsing available flights and filling out a 
 ## 🚀 Getting Started 
 
 ### Clone the Repository
-git clone https://github.com/NinaLukashenko/flights.git
+git clone https://github.com/NinaLukashenko/flights.git<br>
 cd flights
 
 ### Install Dependencies
@@ -20,4 +20,4 @@ npm install
 ### Run the application
 ng serve
 
-## The app will be available at http://localhost:4200/ 🚀
+### The app will be available at http://localhost:4200/ 🚀
